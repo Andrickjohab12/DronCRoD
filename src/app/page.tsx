@@ -19,19 +19,24 @@ export default function Home() {
           </h1>
           <nav>
             <ul className="flex space-x-6">
+            <li>
+                <Link href="#features" className="transition-colors hover:text-purple-400">
+                  Acerca de nosotros
+                </Link>
+              </li>
               <li>
                 <Link href="#features" className="transition-colors hover:text-purple-400">
-                  Features
+                  Servicios
                 </Link>
               </li>
               <li>
                 <Link href="#pricing" className="transition-colors hover:text-purple-400">
-                  Pricing
+                  Precios
                 </Link>
               </li>
               <li>
                 <Link href="#contact" className="transition-colors hover:text-purple-400">
-                  Contact
+                  Contacto
                 </Link>
               </li>
             </ul>
@@ -44,13 +49,13 @@ export default function Home() {
           <div className="absolute inset-0 bg-[url('/placeholder.svg?height=800&width=1600')] opacity-10 bg-cover bg-center"></div>
           <div className="container relative z-10 max-w-3xl mx-auto">
             <h2 className="mb-6 text-5xl font-bold text-transparent sm:text-6xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">
-              Your AI-Powered Financial Assistant
+             Tu asistente personal con IA
             </h2>
             <p className="mb-8 text-xl text-gray-300">
-              Make smarter financial decisions with personalized advice powered by artificial intelligence.
+            Asesoría financiera inteligente y personalizada para impulsar tu futuro
             </p>
             <Button size="lg" className="text-white bg-purple-600 hover:bg-purple-700">
-              Get Started <ArrowRight className="w-5 h-5 ml-2" />
+              Comenzar <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </div>
         </section>
@@ -58,28 +63,28 @@ export default function Home() {
         <section id="features" className="px-4 py-20 bg-gray-900 sm:px-6 lg:px-8">
           <div className="container mx-auto">
             <h3 className="mb-12 text-3xl font-bold text-center text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">
-              Key Features
+              Servicios
             </h3>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
               {[
                 {
-                  title: "AI-Powered Insights",
-                  description: "Get personalized financial advice based on your unique situation",
+                  title: "Consejos basados en IA",
+                  description: " Obten consejos financieros basados en tu perfil",
                   icon: Brain,
                 },
                 {
-                  title: "Budget Optimization",
-                  description: "Optimize your spending and saving habits with intelligent suggestions",
+                  title: "Optimización de tu presupuesto",
+                  description: "Optimice sus hábitos de gasto y ahorro con sugerencias inteligentes",
                   icon: PiggyBank,
                 },
                 {
-                  title: "Investment Strategies",
-                  description: "Receive tailored investment recommendations aligned with your goals",
+                  title: "Estrategias de Inversión",
+                  description: "Reciba recomendaciones de inversión personalizadas alineadas con sus objetivos",
                   icon: BarChart3,
                 },
                 {
-                  title: "Secure and Private",
-                  description: "Your financial data is encrypted and protected at all times",
+                  title: "Seguro y Privado",
+                  description: "Sus datos financieros están encriptados y protegidos en todo momento",
                   icon: Shield,
                 },
               ].map((feature, index) => (
@@ -100,33 +105,33 @@ export default function Home() {
         <section id="pricing" className="px-4 py-20 sm:px-6 lg:px-8">
           <div className="container mx-auto">
             <h3 className="mb-12 text-3xl font-bold text-center text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">
-              Simple Pricing
+              Precios
             </h3>
             <div className="grid max-w-4xl grid-cols-1 gap-8 mx-auto md:grid-cols-3">
               {[
                 {
                   name: "Basic",
-                  price: "$9.99",
-                  features: ["Personalized financial advice", "Basic budgeting tools", "Monthly insights report"],
+                  price: "GRATIS",
+                  features: ["Consejos financieros personalizados", "Herramientas básicas", "Reporte mensual"],
                 },
                 {
                   name: "Pro",
-                  price: "$19.99",
+                  price: "$9.99",
                   features: [
-                    "Everything in Basic",
-                    "Advanced investment strategies",
-                    "Unlimited AI consultations",
-                    "Priority support",
+                    "Todo en Básico",
+                    "Estrategias avanzadas de inversión",
+                    "Consultas ilimitadas de IA", 
+                    "Soporte prioritario",
                   ],
                 },
                 {
-                  name: "Enterprise",
-                  price: "Custom",
+                  name: "Empresarial",
+                  price: "29.99",
                   features: [
-                    "Everything in Pro",
-                    "Dedicated account manager",
-                    "Custom AI model training",
-                    "API access",
+                    "Todo en Pro",
+                    "Gerente de cuenta dedicado",
+                    "Entrenamiento personalizado del modelo de IA", 
+                    "Acceso API", 
                   ],
                 },
               ].map((plan, index) => (
@@ -135,7 +140,7 @@ export default function Home() {
                     <CardTitle className="text-2xl text-purple-300">{plan.name}</CardTitle>
                     <CardDescription className="text-3xl font-bold text-white">
                       {plan.price}
-                      <span className="text-sm font-normal text-gray-400">/month</span>
+                      <span className="text-sm font-normal text-gray-400">/Mensual</span>
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -147,7 +152,7 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
-                    <Button className="w-full mt-6 bg-purple-600 hover:bg-purple-700">Choose Plan</Button>
+                    <Button className="w-full mt-6 bg-purple-600 hover:bg-purple-700">Elegir plan</Button>
                   </CardContent>
                 </Card>
               ))}
@@ -158,13 +163,13 @@ export default function Home() {
         <section id="contact" className="px-4 py-20 bg-gray-900 sm:px-6 lg:px-8">
           <div className="container max-w-2xl mx-auto text-center">
             <h3 className="mb-6 text-3xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">
-              Ready to Transform Your Finances?
+            ¿Listo para Transformar Sus Finanzas?
             </h3>
             <p className="mb-8 text-xl text-gray-300">
-              Join thousands of users who are already benefiting from AI-powered financial advice.
+            Únase a los miles de usuarios que ya se benefician del asesoramiento financiero impulsado por IA.
             </p>
             <Button size="lg" className="text-white bg-purple-600 hover:bg-purple-700">
-              Start Your Free Trial
+            Comience su prueba gratuita
             </Button>
           </div>
         </section>

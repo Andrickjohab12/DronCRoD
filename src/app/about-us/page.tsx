@@ -79,7 +79,7 @@ export default function AboutPage() {
               <Image src="/placeholder.svg?height=500&width=600" alt="Our journey" className="object-cover" fill />
             </div>
             <div className="flex flex-col justify-center">
-              <h2 className="mb-6 text-3xl font-bold text-white">Our Story</h2>
+              <h2 className="mb-6 text-3xl font-bold text-white">Nuestra historia</h2>
               <div className="space-y-4 text-purple-200">
                 <p>
                 Fundada en 2025, FinanceAI surgió de una idea simple pero poderosa: ¿qué pasaría si pudiéramos combinar la
@@ -113,51 +113,51 @@ export default function AboutPage() {
               name: "Andrick Sandoval",
               role: "Programador",
               image: "/placeholder.svg?height=400&width=400",
-              description: "Former fintech executive with 15 years of experience in digital transformation.",
+              description: "descripcion del puesto",
             },
             {
               name: "Montes Santillan ",
               role: "Programador",
               image: "/placeholder.svg?height=400&width=400",
-              description: "AI researcher and architect with a background in quantitative finance.",
+              description: "descripcion del puesto.",
             },
             {
               name: "Sofia Castillo ",
               role: "Programador",
               image: "/placeholder.svg?height=400&width=400",
-              description: "PhD in Machine Learning, specialized in financial modeling and prediction.",
+              description: "descripcion del puesto",
             },
             {
               name: "Michelle Aguero ",
               role: "Programadora",
               image: "/placeholder.svg?height=400&width=400",
-              description: "PhD in Machine Learning, specialized in financial modeling and prediction.",
+              description: "descripcion del puesto.",
             },
 
             {
               name: "Oliver ",
-              role: "Todologo",
+              role: "programador",
               image: "/placeholder.svg?height=400&width=400",
-              description: "PhD in Machine Learning, specialized in financial modeling and prediction.",
+              description: "descripcion del puesto",
             },
             {
               name: "Angel ",
               role: "Programador",
               image: "/placeholder.svg?height=400&width=400",
-              description: "PhD in Machine Learning, specialized in financial modeling and prediction.",
+              description: "descripcion del puesto",
             },
 
             {
               name: "Tomás ",
               role: "Programador",
               image: "/placeholder.svg?height=400&width=400",
-              description: "PhD in Machine Learning, specialized in financial modeling and prediction.",
+              description: "descripcion del puesto",
             },
             {
               name: "Isis ",
               role: "Programador",
               image: "/placeholder.svg?height=400&width=400",
-              description: "PhD in Machine Learning, specialized in financial modeling and prediction.",
+              description: "descripcion del puesto",
             },
           ].map((member, index) => (
             <Card key={index} className="border-purple-800/20 bg-black text-white">

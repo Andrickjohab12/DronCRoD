@@ -20,7 +20,7 @@ export default function Home() {
           <nav>
             <ul className="flex space-x-6">
             <li>
-                <Link href="about-us.tsx" className="transition-colors hover:text-purple-400">
+                <Link href="about-us" className="transition-colors hover:text-purple-400">
                   Acerca de nosotros
                 </Link>
               </li>

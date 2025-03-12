@@ -25,8 +25,8 @@ export default function Home() {
                 </Link>
               </li>
               <li>
-                <Link href="#features" className="transition-colors hover:text-purple-400">
-                  Servicios
+                <Link href="/history" className="transition-colors hover:text-purple-400">
+                Historia
                 </Link>
               </li>
               <li>

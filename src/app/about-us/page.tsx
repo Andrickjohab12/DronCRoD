@@ -1,12 +1,47 @@
 import Image from "next/image"
 import { Award, Globe, Heart, Lightbulb, Target, Users } from "lucide-react"
-
+import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-black">
-      {/* Hero Section */}
+ {/* Header Section AJSV */}
+ <header className="px-4 py-6 border-b border-purple-800 sm:px-6 lg:px-8">
+        <div className="container flex items-center justify-between mx-auto">
+          <h1 className="text-2xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">
+          <Link href="/" className="transition-colors hover:text-purple-400">
+                  FinMateAI
+                </Link>
+          </h1>
+          <nav>
+            <ul className="flex space-x-6">
+            <li>
+                <Link href="/about-us" className="transition-colors hover:text-purple-400">
+                  Acerca de nosotros
+                </Link>
+              </li>
+              <li>
+                <Link href="/history" className="transition-colors hover:text-purple-400">
+                Historia
+                </Link>
+              </li>
+              <li>
+                <Link href="#pricing" className="transition-colors hover:text-purple-400">
+                  Precios
+                </Link>
+              </li>
+              <li>
+                <Link href="#contact" className="transition-colors hover:text-purple-400">
+                  Contacto
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      {/* Information section AJSV */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-black/20" />
         <div className="container relative mx-auto px-4 py-24">
@@ -33,7 +68,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Values Section AJSV */}
       <section className="container mx-auto px-4 py-24">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-white">Nuestros Valores Fundamentales</h2>
@@ -149,7 +184,7 @@ export default function AboutPage() {
 
             {
               name: "Tomás ",
-              role: "Programador",
+              role: "Novelista",
               image: "/placeholder.svg?height=400&width=400",
               description: "descripcion del puesto",
             },

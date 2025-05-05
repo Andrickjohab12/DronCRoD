@@ -96,25 +96,24 @@ export default function Home() {
             <div className="max-w-4xl mx-auto">
               {/* Video Player */}
               <div className="rounded-xl overflow-hidden shadow-xl border border-purple-100">
-                <video className="w-full aspect-video" controls poster="/placeholder.svg?height=720&width=1280">
-                  <source src="#" type="video/mp4" />
-                  Tu navegador no soporta la etiqueta de video.
-                </video>
+              <video className="w-full aspect-video" controls poster="">
+              <source src="/Video.mp4" type="video/mp4" />
+              Tu navegador no admite la etiqueta de video.
+            </video>
               </div>
 
               {/* Video Description */}
               <div className="mt-6 bg-white p-6 rounded-xl shadow-md border border-purple-100">
-                <h3 className="text-xl font-bold mb-3">Transformando las Finanzas Estudiantiles con IA</h3>
+                <h3 className="text-xl font-bold mb-3">Transformando Nuestras Finanzas con IA</h3>
                 <p className="text-gray-700 mb-4">
-                  Esta demostración muestra cómo FinMateAI ayuda a los estudiantes a analizar sus patrones de gasto,
-                  identificar gastos de alto impacto y recibir recomendaciones personalizadas para mejorar su salud
-                  financiera. Nuestra plataforma combina IA avanzada con un diseño intuitivo para hacer que la gestión
-                  financiera sea accesible y efectiva para los estudiantes.
+                Esta demostración muestra cómo FinMateAI ayuda a los estudiantes a analizar sus patrones de gasto, identificar
+                  gastos de alto impacto, y recibir recomendaciones personalizadas para mejorar su salud financiera. Nuestro
+                  la plataforma combina IA avanzada con un diseño intuitivo para hacer que la gestión financiera sea accesible y
+                  efectivo para estudiantes.
                 </p>
                 <p className="text-gray-700">
-                  Observa cómo recorremos las características clave de nuestra plataforma, incluyendo el seguimiento de
-                  gastos, la optimización del presupuesto y consejos personalizados adaptados a las necesidades de los
-                  estudiantes.
+                Observe cómo caminamos a través de las características clave de nuestra plataforma, incluido el seguimiento de gastos y el presupuesto
+                optimización y asesoramiento personalizado adaptado a las necesidades de los estudiantes.
                 </p>
               </div>
 
@@ -123,22 +122,21 @@ export default function Home() {
                 <div className="flex flex-col md:flex-row items-center gap-6">
                   <div className="md:w-1/3">
                     <div className="bg-purple-800/50 p-4 rounded-full w-32 h-32 flex items-center justify-center mx-auto">
-                      <Sparkles className="h-16 w-16" />
+                    <img src="/logo.png" alt="Logo" className="w-20 h-auto" />
                     </div>
                   </div>
                   <div className="md:w-2/3">
-                    <h3 className="text-xl font-bold mb-3">Escucha Nuestra Misión y Visión</h3>
+                    <h3 className="text-xl font-bold mb-3">Escucha Nuestro Spot de Radio</h3>
                     <p className="text-gray-200 mb-4">
-                      Escucha a nuestro fundador explicar la misión y visión detrás de FinMateAI y cómo estamos
-                      trabajando para democratizar el asesoramiento financiero para estudiantes en todas partes.
+                    Escucha un poco acerca de FinMateAI
                     </p>
 
                     {/* Audio Player */}
                     <div className="bg-purple-800/30 p-4 rounded-lg">
-                      <audio className="w-full" controls>
-                        <source src="#" type="audio/mpeg" />
-                        Tu navegador no soporta el elemento de audio.
-                      </audio>
+                    <audio className="w-full" controls>
+  <source src="/Sponsor.MP3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
                     </div>
                   </div>
                 </div>

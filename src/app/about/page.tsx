@@ -19,14 +19,14 @@ export default function AboutPage() {
                     <div>
                       <h2 className="text-2xl font-bold mb-4">Quiénes Somos</h2>
                       <p className="text-gray-700 leading-relaxed">
-                        FinMateAI es una empresa pionera de tecnología financiera que combina inteligencia artificial con
-                        experiencia financiera para proporcionar asesoramiento financiero personalizado a gran escala. Fundada en 2018, hemos
-                        crecido de una pequeña startup a una empresa global que sirve a clientes en más de 30 países.
+                      FinMateAI es una empresa pionera en tecnología financiera que combina inteligencia artificial con
+                      experiencia financiera para proporcionar asesoramiento financiero personalizado a escala. Fundada en 2025, hemos
+                      crecido de una pequeña startup.
                       </p>
                       <p className="text-gray-700 leading-relaxed mt-4">
-                        Nuestro equipo está formado por expertos financieros, científicos de datos e ingenieros de IA apasionados por
-                        hacer que el asesoramiento financiero sea accesible para todos. Creemos que la tecnología puede democratizar el acceso
-                        a orientación financiera de alta calidad y ayudar a las personas a tomar mejores decisiones financieras.
+                      Nuestro equipo está formado por expertos financieros, científicos de datos e ingenieros de IA apasionados
+                      hacer que el asesoramiento financiero sea accesible para todos. Creemos que la tecnología puede democratizar el acceso
+                      orientación financiera de alta calidad y ayudar a las personas a tomar mejores decisiones financieras.
                       </p>
                     </div>
                     <div className="flex justify-center">
@@ -117,35 +117,50 @@ export default function AboutPage() {
               <h2 className="text-2xl font-bold mb-4">Equipo Directivo</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[
-                  {
-                    name: "Sara Jiménez",
-                    title: "CEO y Co-Fundadora",
-                    bio: "Ex banquera de inversión con más de 15 años de experiencia en servicios financieros.",
+                   {
+                    name: "Andrick Sandoval",
+                    title: "Programador Backend,Frontend ",
+                    bio: "-",
                   },
                   {
-                    name: "Miguel Chen",
-                    title: "CTO y Co-Fundador",
-                    bio: "Investigador de IA con un doctorado en Aprendizaje Automático de la Universidad de Stanford.",
+                    name: "Sofia Castillo",
+                    title: "Programador Frontend",
+                    bio: "-",
                   },
                   {
-                    name: "David Rodríguez",
-                    title: "Director Financiero",
-                    bio: "Planificador Financiero Certificado con experiencia en las principales instituciones financieras.",
+                    name: "Montes Santillan",
+                    title: "Programador Backend",
+                    bio: "-",
                   },
                   {
-                    name: "Elena Williams",
-                    title: "Directora de Producto",
-                    bio: "Líder de producto con experiencia en empresas fintech líderes.",
+                    name: "Gisell Rosales",
+                    title: "CEO",
+                    bio: "-",
                   },
                   {
-                    name: "Jaime Wilson",
-                    title: "Director de Marketing",
-                    bio: "Experto en marketing digital especializado en servicios financieros.",
+                    name: "Oliver Retana",
+                    title: "Finanzas",
+                    bio: "-",
                   },
                   {
-                    name: "Aisha Patel",
-                    title: "Jefa de Éxito del Cliente",
-                    bio: "Dedicada a asegurar que los clientes alcancen sus metas financieras.",
+                    name: "Michel Aguero",
+                    title: "Finanzas",
+                    bio: "-.",
+                  },
+                  {
+                    name: "Angel Gallardo",
+                    title: "Marketing y Publicidad",
+                    bio: "-.",
+                  },
+                  {
+                    name: "Isis Echeverría",
+                    title: "Marketing y Publicidad",
+                    bio: "-.",
+                  },
+                  {
+                    name: "Tomas De Santiago",
+                    title: "Recursos humanos",
+                    bio: "-.",
                   },
                 ].map((person, index) => (
                   <Card key={index}>
@@ -170,29 +185,49 @@ export default function AboutPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-4">Nuestros Logros</h2>
-              <Card>
-                <CardContent className="pt-6">
-                  <ul className="space-y-4">
-                    <li className="flex items-start">
-                      <div className="mr-4 mt-1 bg-purple-100 p-1 rounded-full">
-                        <Award className="h-5 w-5 text-purple-600" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold">Mejor Startup Fintech 2022</h3>
-                        <p className="text-gray-700">Reconocidos por nuestro enfoque innovador al asesoramiento financiero.</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <div className="mr-4 mt-1 bg-purple-100 p-1 rounded-full">
-                        <Award className="h-5 w-5 text-purple-600" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold">Top 10 Empresas de IA para Observar</h3>
-                        <p className="text-gray-700">Destacados en la lista anual de innovación tecnológica global.</p>
-                      </div>
-                    </li>
-                  </ul>
+            <h2 className="text-2xl font-bold mb-4">Nuestros Logros</h2>
+            <Card>
+              <CardContent className="pt-6">
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <div className="mr-4 mt-1 bg-purple-100 p-1 rounded-full">
+                      <Award className="h-5 w-5 text-purple-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">Mejor Startup Fintech 2025</h3>
+                      <p className="text-gray-700">Reconocido por nuestro enfoque innovador de asesoramiento financiero.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="mr-4 mt-1 bg-purple-100 p-1 rounded-full">
+                      <Award className="h-5 w-5 text-purple-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">IA</h3>
+                      <p className="text-gray-700">Destacado en la lista anual de empresas innovadoras.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="mr-4 mt-1 bg-purple-100 p-1 rounded-full">
+                      <Award className="h-5 w-5 text-purple-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">10 Usuarios </h3>
+                      <p className="text-gray-700">Llegó a 10 usuarios en nuestra plataforma en 2025.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="mr-4 mt-1 bg-purple-100 p-1 rounded-full">
+                      <Award className="h-5 w-5 text-purple-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">Excelencia en Satisfacción del Cliente</h3>
+                      <p className="text-gray-700">
+                      Mantuvo una calificación de satisfacción del cliente de 4.8/5.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
                 </CardContent>
               </Card>
             </section>

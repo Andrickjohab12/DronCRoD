@@ -189,4 +189,16 @@ export default function AboutPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold">Top 10 Empresas de IA para Observar</h3>
-                        <p className="text-gray-700">Destacados en la lista anual\
+                        <p className="text-gray-700">Destacados en la lista anual de innovación tecnológica global.</p>
+                      </div>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}

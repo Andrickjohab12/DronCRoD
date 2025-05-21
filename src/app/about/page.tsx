@@ -32,10 +32,10 @@ export default function AboutPage() {
                     <div className="flex justify-center">
                       <div className="relative w-full h-[300px] rounded-lg overflow-hidden">
                         <img
-                          src="/placeholder.svg?height=300&width=400"
+                          src="/VACANTE.png"
                           alt="Equipo FinMateAI"
                           className="object-cover"
-                          style={{ width: "100%", height: "100%" }}
+                          style={{ width: "50%", height: "100%" }}
                         />
                       </div>
                     </div>

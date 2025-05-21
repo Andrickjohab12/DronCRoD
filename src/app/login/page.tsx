@@ -1,8 +1,6 @@
 "use client"
 
-import type React from "react"
-
-import { useState } from "react"
+import React, { useState } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { Sparkles, Eye, EyeOff } from "lucide-react"
@@ -13,9 +11,11 @@ import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { SiteHeader } from "@/components/site-header"
 
+import { supabase } from "@/lib/supabaseClient" // Importa supabase aquí
+
 export default function LoginPage() {
   const router = useRouter()
-  const [username, setUsername] = useState("")
+  const [email, setEmail] = useState("") // mejor usar email en lugar de username para auth
   const [password, setPassword] = useState("")
   const [showPassword, setShowPassword] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -27,14 +27,22 @@ export default function LoginPage() {
     setError("")
 
     try {
-      // Simulación de inicio de sesión
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      // Aquí usas el método real de supabase para iniciar sesión con email y password
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      })
 
-      // Aquí iría la lógica de autenticación con la base de datos
-      // Por ahora, simplemente redirigimos al perfil
+      if (error) {
+        setError(error.message)
+        setLoading(false)
+        return
+      }
+
+      // Si el login es correcto, rediriges a perfil
       router.push("/profile")
     } catch (err) {
-      setError("Credenciales incorrectas. Por favor intenta de nuevo.")
+      setError("Error inesperado, intenta de nuevo")
     } finally {
       setLoading(false)
     }
@@ -61,12 +69,13 @@ export default function LoginPage() {
             )}
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="username">Nombre de Usuario</Label>
+                <Label htmlFor="email">Correo Electrónico</Label>
                 <Input
-                  id="username"
-                  placeholder="Ingresa tu nombre de usuario"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  id="email"
+                  type="email"
+                  placeholder="Ingresa tu correo"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
               </div>
@@ -89,17 +98,6 @@ export default function LoginPage() {
                     {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
                   </button>
                 </div>
-              </div>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-2">
-                  <input type="checkbox" id="remember" className="rounded border-gray-300" />
-                  <label htmlFor="remember" className="text-sm text-gray-600">
-                    Recordarme
-                  </label>
-                </div>
-                <Link href="#" className="text-sm text-purple-600 hover:underline">
-                  ¿Olvidaste tu contraseña?
-                </Link>
               </div>
               <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700" disabled={loading}>
                 {loading ? "Iniciando sesión..." : "Iniciar Sesión"}

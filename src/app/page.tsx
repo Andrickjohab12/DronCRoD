@@ -34,13 +34,13 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex justify-center">
-                <img
-                  alt="Panel Financiero"
+                {/* <img
+                  alt=""
                   className="rounded-lg object-cover"
                   height="400"
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/"
                   width="600"
-                />
+                /> */}
               </div>
             </div>
           </div>

@@ -120,16 +120,15 @@ export default function MapaPage() {
     }
 
     const savedRoute: SavedRoute = {
-      id: Date.now().toString(),
-      name: newRoute.name,
-      description: newRoute.description,
-      points: [...routePoints],
-      createdAt: isClient && currentTime ? currentTime.toLocaleString() : new Date().toLocaleString(),
-      estimatedTime: `${Math.floor(routePoints.length * 1.5)}:${
-        (routePoints.length * 30) % (60).toString().padStart(2, "0")
-      } min`,
-      distance: `${(routePoints.length * 0.3).toFixed(1)} km`,
-    }
+  id: Date.now().toString(),
+  name: newRoute.name,
+  description: newRoute.description,
+  points: [...routePoints],
+  createdAt: isClient && currentTime ? currentTime.toLocaleString() : new Date().toLocaleString(),
+  estimatedTime: `${Math.floor(routePoints.length * 1.5)}:${((routePoints.length * 30) % 60).toString().padStart(2, "0")} min`,
+  distance: `${(routePoints.length * 0.3).toFixed(1)} km`,
+}
+
 
     setSavedRoutes((prev) => [savedRoute, ...prev])
     setNewRoute({ name: "", description: "" })

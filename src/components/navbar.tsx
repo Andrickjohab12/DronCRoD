@@ -42,9 +42,9 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <Link href="/" className="flex items-center gap-3">
             {/* Logo más grande para móviles */}
-            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center border-2 border-blue-200 shadow-md">
+            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br  rounded-lg flex items-center justify-center border-2  shadow-md">
               <Image
-                src="/placeholder.svg?height=48&width=48"
+                src="/LogoITT.jpg"
                 alt="Logo Universidad"
                 width={48}
                 height={48}

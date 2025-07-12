@@ -72,7 +72,7 @@ export default function ConfiguracionPage() {
         </div>
       </div>
 
-      <div className="container mt-6">
+      <div className="container mt-6 Centered">
         <Tabs defaultValue="conexion" className="w-full">
           <TabsList className="mb-4">
             <TabsTrigger value="conexion">Conexión</TabsTrigger>

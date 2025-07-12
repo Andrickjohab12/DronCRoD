@@ -168,7 +168,7 @@ export default function MapaPage() {
         </div>
       </div>
 
-      <div className="container mt-4 lg:mt-6">
+      <div className="container mt-4 lg:mt-6 Centered">
         <div className="grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 gap-4 lg:gap-6">
           {/* Mapa principal */}
           <div className="lg:col-span-3">

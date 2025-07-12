@@ -123,7 +123,7 @@ export default function VideoPage() {
         </div>
       </div>
 
-      <div className="container mt-6">
+      <div className="container mt-6 Centered">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Video principal */}
           <div className="lg:col-span-2">
@@ -133,7 +133,7 @@ export default function VideoPage() {
                 <div
                   ref={videoContainerRef}
                   className={`w-full aspect-video bg-gray-900 flex items-center justify-center relative overflow-hidden ${
-                    isFullscreen ? "fixed inset-0 z-50 aspect-auto" : ""
+                    isFullscreen ? "fixed inset-0 z-50 aspect-auto" : "Roundedtop"
                   }`}
                 >
                   {/* Simulación de video con gradiente animado */}

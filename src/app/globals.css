@@ -5,6 +5,15 @@
 
 
 @layer base {
+  .LeftMarg-10{
+    margin-left: 10px;
+  }
+
+  .Centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   :root {
 
     --background: 0 0% 100%;

@@ -150,7 +150,7 @@ export default function DronCRoDDashboard() {
       </div>
 
       {/* Contenido principal */}
-      <div className="container mt-4 lg:mt-6">
+      <div className="container mt-4 lg:mt-6 Centered">
         <Tabs defaultValue="panel" className="w-full">
           <TabsList className="mb-4">
             <TabsTrigger value="panel">Panel de Monitoreo</TabsTrigger>

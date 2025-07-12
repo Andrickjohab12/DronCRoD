@@ -40,7 +40,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-blue-100 bg-white/95 backdrop-blur-sm shadow-sm">
       <div className="container flex h-16 lg:h-18 items-center justify-between">
         <div className="flex items-center gap-3">
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3 LeftMarg-10">
             {/* Logo más grande para móviles */}
             <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br  rounded-lg flex items-center justify-center border-2  shadow-md">
               <Image

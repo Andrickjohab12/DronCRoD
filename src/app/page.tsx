@@ -1,5 +1,8 @@
-"use client"
 
+
+
+
+"use client"
 import { useState, useEffect } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -29,8 +32,12 @@ import {
   Send,
 } from "lucide-react"
 import VideoWidget from "@/components/video-widget"
+//To use telemetry config
+import useTelemetria from "./telemetryConfig";
+
 
 export default function DronCRoDDashboard() {
+  const { lat, lon, alt, bateria_voltaje } = useTelemetria();
   const [isConnected, setIsConnected] = useState(true)
   const [isArmed, setIsArmed] = useState(false)
   const [currentTime, setCurrentTime] = useState<Date | null>(null)
@@ -171,23 +178,29 @@ export default function DronCRoDDashboard() {
                 </CardHeader>
                 <CardContent className="space-y-3 lg:space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4">
-                    <div>
-                      <p className="text-gray-500 text-sm">Latitud</p>
-                      <p className="font-mono">{droneData.gps.latitude.toFixed(6)}°</p>
-                    </div>
-                    <div>
-                      <p className="text-gray-500 text-sm">Longitud</p>
-                      <p className="font-mono">{droneData.gps.longitude.toFixed(6)}°</p>
-                    </div>
+        
+   <div>
+  <p className="text-gray-500 text-sm">Latitud</p>
+  <p className="font-mono">
+    {lat !== null ? (lat as number).toFixed(6) : "Cargando..."}°
+
+  </p>
+</div>
+<div>
+  <p className="text-gray-500 text-sm">Longitud</p>
+  <p className="font-mono">
+  {lon !== null ? (lon as number).toFixed(6) : "Cargando..."}°
+  </p>
+</div>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4">
                     <div>
-                      <p className="text-gray-500 text-sm">Alt. Relativa</p>
-                      <p className="font-mono">{droneData.gps.altitudeRelative.toFixed(1)} m</p>
+                      <p className="text-gray-500 text-sm">Altitud</p>
+                      <p className="font-mono">  {alt !== null ? (alt as number).toFixed(6) : "Cargando..."} m</p>
                     </div>
                     <div>
-                      <p className="text-gray-500 text-sm">Alt. Absoluta</p>
-                      <p className="font-mono">{droneData.gps.altitudeAbsolute.toFixed(1)} m</p>
+                      <p className="text-gray-500 text-sm">Bateria Voltaje</p>
+                      <p className="font-mono">{bateria_voltaje !== null ? (bateria_voltaje as number).toFixed(6) : "Cargando..."} V</p>
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
